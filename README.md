@@ -8,7 +8,7 @@ Infrastructure as code that automates the process of creating a secured environm
 
 `2.`  Linux Operating System using the Ubuntu machine image distribution.
 
-`3.`  Servers are load-balanced with auto-scaling feature.
+`3.`  Servers are load-balanced with auto-scaling feature across two availability zones within a single region.
 
 `4.`  Entry-point to the application is HTTP port 80.
 
