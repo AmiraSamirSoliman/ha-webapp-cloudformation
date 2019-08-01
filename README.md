@@ -6,7 +6,7 @@ Infrastructure as code that automates the process of creating a secured environm
 
 `1.`  Four application servers: 2vCPUs, 4GB RAM, 10GB disk space.
 
-`2.`  Linux Operating System using the Ubuntu machine image distribution.
+`2.`  Linux Operating System using the Ubuntu distribution machine image.
 
 `3.`  Servers are load-balanced with auto-scaling feature across two availability zones within a single region.
 
