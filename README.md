@@ -17,9 +17,9 @@ Infrastructure as code that automates the process of creating a secured environm
 
 ### Detailed Infrastructure Architecture
 
+![alt text][architecture]
 
-
-
+[architecture]: https://github.com/dennislabajo/ha-webapp-cloudformation/raw/master/High%20Availability%20Web%20Application.png "Architecture Diagram"
 
 
 ### Execution Requirements
