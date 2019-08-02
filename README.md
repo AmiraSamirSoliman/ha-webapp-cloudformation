@@ -1,3 +1,7 @@
+![alt text][header]
+
+[header]: https://github.com/dennislabajo/ha-webapp-cloudformation/raw/master/header.png "Header"
+
 # Deploy a High-Availability Web Application using CloudFormation
 
 Infrastructure as code that automates the process of creating a secured environment and deploying an application (packaged and uploaded into AWS S3 Storage) into a dockerized Apache Web Server. The script contains all the configurations needed for a repeatable process so that the infrastructure can be re-created and discarded at will multiple times.
