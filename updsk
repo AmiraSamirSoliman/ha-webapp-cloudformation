@@ -4,6 +4,7 @@
 stack_name=$1
 template=$2
 parameters=$3
+capabilities=CAPABILITY_NAMED_IAM
 region=us-west-2
 
 
@@ -57,7 +58,8 @@ aws cloudformation $cfn_cmd \
 --stack-name $stack_name \
 --template-body file://$template \
 --parameters file://$parameters \
---region=$region
+--region=$region \
+--capabilities=$capabilities
 
 if [ $? -eq 0 ]
 then

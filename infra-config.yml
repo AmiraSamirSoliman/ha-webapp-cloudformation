@@ -3,7 +3,7 @@ Description: >
 
 Parameters:
   ProjectName:
-    Description: An environment name prefixed to resource names
+    Description: Project name prefixed to resource names
     Type: String
   VpcCIDR:
     Description: CIDR Block for the VPC
