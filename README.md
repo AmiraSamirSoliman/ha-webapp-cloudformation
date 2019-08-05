@@ -2,6 +2,8 @@
 
 [header]: https://github.com/dennislabajo/ha-webapp-cloudformation/raw/master/header.png "Header"
 
+<br>
+
 # Deploy a High-Availability Web Application Using AWS CloudFormation
 
 Infrastructure-as-code (IAC) that automates the process of creating a secured and high-availability environment and deploying an application (packaged and staged in AWS S3 Storage) into a dockerized Apache Web Server. The script contains all the configurations needed for a repeatable process so that the infrastructure can be discarded and recreated at will multiple times.
@@ -112,6 +114,7 @@ Once infrastructure has been completed (by checking AWS CloudFormation for stack
 
 `3.`  Check status of the stacks. This may take a while since each of the compute instances is setting up docker, downloading the code, and deploying this to a dockerized Apache server.  Once complete and to test the environment is setup, navigate to `EC2 Dashboard` - `Load Balancers` and copy the DNS name to your browser.
 
+<br>
 
 ### Credits:
 
