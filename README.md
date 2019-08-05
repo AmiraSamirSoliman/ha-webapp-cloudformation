@@ -6,6 +6,7 @@
 
 Infrastructure-as-code (IAC) that automates the process of creating a secured and high-availability environment and deploying an application (packaged and staged in AWS S3 Storage) into a dockerized Apache Web Server. The script contains all the configurations needed for a repeatable process so that the infrastructure can be discarded and recreated at will multiple times.
 
+<br>
 
 ### Features
 
@@ -15,24 +16,25 @@ Infrastructure-as-code (IAC) that automates the process of creating a secured an
 
 `3.`  Linux Operating System using the Ubuntu distribution machine image.
 
-`4.`  Application servers are secured in a private subnet and only accepts traffic originating from a bastion host and load-balancer both within a public subnet.
+`4.`  Compute instances are secured in a private subnet and only accepts traffic originating from a bastion host and load-balancer both within a public subnet.
 
-`5.`  Each availability zone contain a bastion host to enable SSH to instances in each of the private subnets for debugging and troubleshooting production technical issues.
+`5.`  Each availability zone contain a bastion host to enable SSH to instances in each of the private subnets for debugging and troubleshooting.
 
 `6.`  Load-balancer, bastion host, and application servers have security groups defined with only needed ports opened.
 
 `7.`  Application servers have outbound internet access via NAT gateway for critical OS updates and patches.
 
-`6.`  Sample application code is packaged and stored in an S3 bucket with IAM permissions.
+`8.`  Sample application code is packaged and stored in an S3 bucket with IAM permissions.
 
-`7.`  Application servers are configured with IAM instance profile to be able to access and download application code from AWS S3 bucket.
+`9.`  Application servers are configured with IAM instance profile to be able to access and download application code from AWS S3 bucket.
 
-`8.`  Application code is deployed in a dockerized apache web server.
+`10.` Application code is deployed in a dockerized apache web server for added security and isolation.
 
-`9.`  Health checks and thresholds are defined for availability detection.  Metrics are aggregated and monitored via AWS CloudWatch.
+`11.` Health checks and thresholds are defined to aid in system availability detection.  Metrics are collected, aggregated, and monitored via AWS CloudWatch.
 
-`10.` Entire environment is fully virtualized in a cloud platform that can be taken down and brought back up within a short period of time. The process of creating and starting all the services, spinning up instances are automated via script.
+`12.` Entire environment is fully virtualized in a cloud platform that can be taken down and brought back up within a short period of time. The process of creating and starting all the services, spinning up instances are automated via scripts in this repo.
 
+<br>
 
 ### Detailed Infrastructure Architecture
 
@@ -40,10 +42,11 @@ Infrastructure-as-code (IAC) that automates the process of creating a secured an
 
 [architecture]: https://github.com/dennislabajo/ha-webapp-cloudformation/raw/master/High%20Availability%20Web%20ApplicationV2.png "Architecture Diagram"
 
+<br>
 
 ### Pre-requisites
 
-> Steps 2-6 is manual for now but will be scripted in the next release.
+> Steps from #2  to #6 below are manual tasks for now but will be scripted in the next release.
 
 `1.`  AWS account - Make sure you have an AWS account created and most importantly for Amazon, billing information setup :)
 
@@ -57,9 +60,9 @@ or
 aws s3 ls
 ```
 
-`2.`  Create an S3 storage in your AWS account and upload the sample code `udacity.zip`.  Take note of the name you assigned to your S3 storage.
+`3.`  Create an S3 storage in your AWS account and upload the sample code `udacity.zip`.  Take note of the name you assigned to your S3 storage.
 
-`3.`  Apply the `Bucket Policy` below.  Replace the text `<REPLACE ME>` from the policy below with the name of the S3 storage created in the previous step.
+`4.`  Apply the `Bucket Policy` below.  Replace the text `<REPLACE ME>` from the policy below with the name of the S3 storage created in the previous step.
 
 ```json
 {
@@ -79,12 +82,13 @@ aws s3 ls
 }
 ```
 
-`4.`  Edit the `servers-params.json` file and update/replace the value of `S3CodeRepo` with the full S3 path and file name of `udacity.zip`. 
+`5.`  Edit the `servers-params.json` file and update/replace the value of `S3CodeRepo` with the full S3 path and file name of `udacity.zip`. See AWS S3 console.
 
-`5.`  Create a `Key Pair` in AWS EC2 and take note of the name assigned to the key pair. Alternatively, upload the sample PEM file included in this repo.
+`6.`  Create a `Key Pair` in AWS EC2 and take note of the name assigned to the key pair. Alternatively, upload the sample PEM file included in this repo.
 
-`6.`  Edit the `servers-params.json` file and update/replace the value of `KeyPairName` with the key pair name created in the previous step. 
+`7.`  Edit the `servers-params.json` file and update/replace the value of `KeyPairName` with the key pair name created in the previous step. 
 
+<br>
 
 ### Steps
 
