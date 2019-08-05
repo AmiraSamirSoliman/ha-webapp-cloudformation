@@ -46,7 +46,7 @@ Infrastructure-as-code (IAC) that automates the process of creating a secured an
 
 <br>
 
-### Pre-requisites
+### Prerequisites
 
 > Steps from #2  to #6 below are manual tasks for now but will be scripted in the next release.
 
