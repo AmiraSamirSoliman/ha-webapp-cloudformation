@@ -121,6 +121,6 @@ Once infrastructure has been completed (by checking AWS CloudFormation for stack
 
 <br>
 
-### Credits:
+### Credits
 
 Udacity Cloud DevOps Nanodegree Program
