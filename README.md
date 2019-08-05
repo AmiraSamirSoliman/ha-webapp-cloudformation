@@ -96,21 +96,26 @@ aws s3 ls
 
 `1.`  Clone the git repository
 
-`2.`  There are two components to standing up our environment in AWS: `infra` and `servers`.  Infrastructure is are the VPCs, gateways, subnets, and routing.  Servers are the compute resources, load-balancers, and auto-scaling.
+`2.`  There are two components to standing up our environment in AWS: `infra` and `servers`.  Infrastructure are the VPCs, gateways, subnets, and routing.  Servers are the compute resources, load-balancers, and auto-scaling.
+
+<p>
 
 Infrastructure must be setup first. Run the command below with an arbitrary stack name e.g. 'infra'
 
 ```
 ./aws_cu <stack name> infra-config.yml infra-params.json
 ```
+<p>
 
 Once infrastructure has been completed (by checking AWS CloudFormation for stack status), run the command below and assigning another arbitrary stack name e.g. 'servers'
 
 ```
 ./aws_cu <stack name> servers-config.yml servers-params.json
 ```
+<br>
 
 > `aws_cu` is a custom shell script and wrapper around `aws cloudformation` cli commands. It includes template validation, checks if stack already exist, and if it does, performs an `update-stack` otherwise `create-stack`.
+
 
 `3.`  Check status of the stacks. This may take a while since each of the compute instances is setting up docker, downloading the code, and deploying this to a dockerized Apache server.  Once complete and to test the environment is setup, navigate to `EC2 Dashboard` - `Load Balancers` and copy the DNS name to your browser.
 
