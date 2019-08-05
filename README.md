@@ -11,7 +11,7 @@ Infrastructure-as-code (IAC) that automates the process of creating a secured an
 
 `1.`  Load-balanced servers with auto-scaling capability across two availability zones within a single region.
 
-`2.`  Four application servers: 2vCPUs, 4GB RAM, 10GB disk space.
+`2.`  Server/instance specification: 2vCPUs, 4GB RAM, 10GB disk space.
 
 `3.`  Linux Operating System using the Ubuntu distribution machine image.
 
