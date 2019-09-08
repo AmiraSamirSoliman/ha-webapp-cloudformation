@@ -1,5 +1,3 @@
-![alt text][header]
-
 [header]: https://github.com/dennislabajo/ha-webapp-cloudformation/raw/master/header.png "Header"
 
 <br>
